@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@500&display=swap');
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Lora, Georgia, 'Times New Roman', Times, serif;
+    background-color: whitesmoke;
+}
+
+.container {
+    background-image: url("css\window-painting.jpg");
+    background-size: cover;
+}
+
+.title {
+    margin-top: 40vh;
+    text-align: center;
+}
+
+.loader {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
