@@ -31,4 +31,5 @@ main {
 .title {
     font-size: 4rem;
     font-family: 'Amatic SC', cursive;
+    padding-top: 20px;
 }
