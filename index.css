@@ -125,3 +125,13 @@ main {
     margin-right: 5px;
     color: var(--on-background);
   }
+
+  @media screen and (max-width: 980px) {
+      .toggle-text {
+          display: none;
+      }
+
+      .theme-switch-wrapper {
+          margin-right: 100px;
+      }
+  }
