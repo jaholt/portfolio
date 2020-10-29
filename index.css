@@ -5,10 +5,22 @@ html {
     box-sizing: border-box;
 }
 
+:root {
+    --on-background: rgba(0, 0, 0, 0.8);
+    --backgroundimage: url("/portfolio/css/mountains-image.jpg");
+    --backgroundcolor: #f3f3f3;
+}
+
+[data-theme="dark" ] {
+    --on-background: rgba(255, 255, 255, 0.5);
+    --backgroundimage: url("/portfolio/css/night-background.jpg");
+    --backgroundcolor: #343a40;
+}
+
 body {
     margin: 0;
     font-family: Lora, Georgia, 'Times New Roman', Times, serif;
-    background-color: whitesmoke;
+    background-color: var(--backgroundcolor) !important;
 }
 
 header {
@@ -16,13 +28,15 @@ header {
 }
 
 main {
-    background-image: url("/portfolio/css/mountains-image.jpg");
+    background-image: var(--backgroundimage);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     height: 95vh;
     color: ivory;
 }
+
+
 
 .title-container {
     padding-top: 30vh;
@@ -33,3 +47,81 @@ main {
     font-family: 'Amatic SC', cursive;
     padding-top: 20px;
 }
+
+/* Dark Mode Toggle */
+.theme-switch-wrapper {
+    display: flex;
+    align-items: center;
+    z-index: 100;
+    position: fixed;
+    right: 25px;
+    top: 15px;
+  }
+  
+  .theme-switch-wrapper span {
+    margin-right: 10px;
+    font-size: 1rem;
+  }
+  
+  .toggle-text {
+    position: relative;
+    top: -6px;
+    right: 5px;
+    color: var(--on-background);
+  }
+  
+  .theme-switch {
+    display: inline-block;
+    height: 34px;
+    position: relative;
+    width: 60px;
+  }
+  
+  .theme-switch input {
+    display: none;
+  }
+  
+  .slider {
+    background: #ccc;
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: 0.4s;
+  }
+  
+  .slider::before {
+    background: #fff;
+    bottom: 4px;
+    content: "";
+    height: 26px;
+    left: 4px;
+    position: absolute;
+    transition: 0.4s;
+    width: 26px;
+  }
+  
+  input:checked + .slider {
+    background: green;
+  }
+  
+  input:checked + .slider::before {
+    transform: translateX(26px);
+  }
+  
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round::before {
+    border-radius: 50%;
+  }
+  
+  .fas {
+    margin-top: -7px;
+    font-size: 30px;
+    margin-right: 5px;
+    color: var(--on-background);
+  }
